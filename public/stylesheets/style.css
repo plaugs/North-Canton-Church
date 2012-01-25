@@ -1,0 +1,123 @@
+body {  
+  font-size: 10pt;
+  color: black;
+  padding:0;
+  margin:0;
+  font-family: Verdana, 'Trebuchet MS'; }
+
+/*bodyback2{
+    background-position: right bottom;
+    background-attachment: fixed;
+    background-image: url(images/house1.jpg);
+    background-repeat: no-repeat
+}*/
+
+body, p, ol, ul, td {
+  font-family: helvetica, verdana, arial, sans-serif;}
+
+pre { }
+
+h1 {
+  font-family:Verdana, Helvetica,sans-serif;}
+
+h2 {
+  font-weight: bolder;
+  font-size: 12pt;
+  color: #000080;
+  font-style: italic;
+  font-family: Arial, Tahoma, Verdana;
+}
+
+h3 {
+  font-family:Verdana, Helvetica,sans-serif;}
+
+a {
+  font-size: 8pt;
+  color: #a70000;
+  font-family: Verdana, Arial; }
+  a:visited {
+    color: #000; }
+  a:hover {
+    color: #fff; background-color:#000; }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+div.flash_note {
+  background-color:#ddffd1;
+  border:2px solid #32b704;
+  color:#185702;
+  padding:5px 20px 5px;
+  margin-bottom: 15px ; }
+
+div.flash_error, div.errorExplanation {
+  background-color:#ffddd1;
+  border:2px solid #b73204;
+  color:#571802;
+  padding:5px 20px 5px;
+  margin-bottom: 15px ; }
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff; }
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px; }
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square; }
+
+img {
+  border:none; }
+
+.admin_table {
+  width:100%;
+  border-collapse:collapse;
+  border:1px solid #ccc; }
+  .admin_table tr {
+    height:30px; }
+
+.even_row {
+  border-top: 1px solid #ccc;
+  background-color:#eee; }
+
+.odd_row {
+  border-top: 1px solid #ccc;
+  background-color:#fff; }
+
+#header{
+  width:100%;
+  float:left;
+}
+
+#menu {
+  float:left;
+  width:150px;
+  height:300px;
+}
+
+#content {
+  float:left;
+  width:650px;
+  margin:0px 0px 0px 20px;
+  background-position: right top;
+  background-repeat: no-repeat; }
+
