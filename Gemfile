@@ -20,7 +20,7 @@ group :development, :test, :cucumber do
   gem 'heroku'
   gem "taps"
   gem 'capybara'
-  gem 'ruby-debug'
+  gem 'ruby-debug19'
   gem 'database_cleaner'
 end
 
