@@ -10,6 +10,10 @@ body {
 	background-color:#079b79;
 	}
 
+img {
+	border:0;
+	}
+
 a, li, ul, ol, td, tr {
 	color:#fff;
 	text-decoration:none;
