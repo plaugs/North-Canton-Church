@@ -6,6 +6,7 @@ gem 'omniauth-openid'
 gem 'will_paginate'
 gem 'pg'
 gem 'acts_as_versioned'
+gem 'thin'
 
 group :development, :test, :cucumber do
   gem 'mongrel', '>=1.2.0.pre2'
