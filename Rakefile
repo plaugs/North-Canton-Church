@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Ohiorealtygroup::Application.load_tasks
+Northcantonchurch::Application.load_tasks

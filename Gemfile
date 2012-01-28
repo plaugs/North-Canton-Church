@@ -1,15 +1,14 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.6'
-gem "authlogic", :git => 'git://github.com/railsware/authlogic.git'
-gem 'will_paginate', "3.0"
-#gem "searchlogic"
-#gem 'postgres', '0.7.9.2008.01.28'
+gem 'rails', '3.2.0'
+gem 'devise'
+gem 'omniauth-openid'
+gem 'will_paginate'
 gem 'pg'
-gem 'prototype_legacy_helper', '0.0.0', :git => 'git://github.com/rails/prototype_legacy_helper.git'
 gem 'acts_as_versioned'
 
 group :development, :test, :cucumber do
+  gem 'mongrel', '>=1.2.0.pre2'
   gem 'cucumber'
   gem 'cucumber-rails'
   gem 'webrat'
@@ -20,7 +19,7 @@ group :development, :test, :cucumber do
   gem 'heroku'
   gem "taps"
   gem 'capybara'
-  #gem 'ruby-debug19'
+  gem 'pry'
   gem 'database_cleaner'
 end
 

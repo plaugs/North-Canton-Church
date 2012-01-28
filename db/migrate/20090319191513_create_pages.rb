@@ -9,12 +9,9 @@ class CreatePages < ActiveRecord::Migration
     end
     add_index :pages, :url_tag
 
-    Page.create_versioned_table
-
   end
 
   def self.down
-    Page.drop_versioned_table
     drop_table :pages    
   end
 end

@@ -5,7 +5,7 @@ Then /^I should receive an email notification$/ do
 end
 
 def current_email_address
-  Ohiorealtygroup::Application.config.contact_recipient
+  Northcantonchurch::Application.config.contact_recipient
 end
 
 Then /^I should not receive an email notification$/ do

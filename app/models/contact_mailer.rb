@@ -7,7 +7,7 @@ class ContactMailer < ActionMailer::Base
     #@from                   = contents.email_address
     #@sent_on                = Time.now
     #@headers                = {}
-    mail(:to => Ohiorealtygroup::Application.config.contact_recipient, :subject => 'Contact Us Form', :from => @contents.email_address, :headers => {}) do |format|
+    mail(:to => Northcantonchurch::Application.config.contact_recipient, :subject => 'Contact Us Form', :from => @contents.email_address, :headers => {}) do |format|
       format.text { render :contact_us_email }
     end
   end  
