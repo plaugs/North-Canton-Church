@@ -6,9 +6,9 @@ gem 'omniauth-openid'
 gem 'will_paginate'
 gem 'pg'
 gem 'acts_as_versioned'
+gem 'thin'
 
-group :development, :test, :cucumber do
-  gem 'mongrel', '>=1.2.0.pre2'
+group :development, :test do
   gem 'cucumber'
   gem 'cucumber-rails'
   gem 'webrat'
@@ -21,5 +21,6 @@ group :development, :test, :cucumber do
   gem 'capybara'
   gem 'pry'
   gem 'database_cleaner'
+  gem 'sqlite3-ruby', :require => 'sqlite3'
 end
 
