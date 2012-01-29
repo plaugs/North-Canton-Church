@@ -5,10 +5,10 @@
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>Hope Christian Fellowship : North Canton</title>
 <!-- InstanceEndEditable -->
-<link href="style/style.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-<link href="style/nivo-slider.css" rel="stylesheet" type="text/css">
-<link href="style/default.css" rel="stylesheet" type="text/css">
+<link href="stylesheets/all.css" rel="stylesheet" type="text/css">
+<link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+<link href="stylesheets/nivo-slider.css" rel="stylesheet" type="text/css">
+<link href="stylesheets/default.css" rel="stylesheet" type="text/css">
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 <script type="text/javascript">
@@ -26,13 +26,16 @@
 </script>
 </head>
 <body>
-	<div id="header">
+	<div class="page-topbg"></div>
+<div class="page-wrap">
     	<div id="header-inner">
  	    	<h1>
-			<a href="/" id="logo"><span class="remove">Hope Community Christian Fellowship : North Canton</span></a>
-          </h1>
-            <div id="tagline">"Revealing Jesus through building relationships"</div>
-            <div class="clear"></div><!-- #BeginLibraryItem "/Library/menu.lbi" -->            <div id="menu">
+			<a href="/" id="logo"><img src="images/logo.png" width="328" height="82" alt="Hope Christian Fellowship"></a>
+			</h1>
+        <div id="tagline">"Revealing Jesus through building relationships"</div>
+            <div class="clear"></div>
+			<!-- #BeginLibraryItem "/Library/menu.lbi" -->            
+			<div id="menu">
 	           <ul>
                    <li><a href="/">HOME</a></li>
                    <li><a href="mission.html">MISSION</a></li>
@@ -41,15 +44,15 @@
                    <li><a href="contact.html">CONTACT</a></li>
                </ul>
             </div>
-<!-- #EndLibraryItem --></div>
+			<!-- #EndLibraryItem -->
+		</div>
       
-    </div>
-	<div id="container">
+	<div class="container">
 		<div id="slide-show">
             <div class="slider-wrapper theme-default">
                 <div class="ribbon"></div>
             <!-- InstanceBeginEditable name="slideshow" -->
-                <div id="slider" class="nivoSlider"> <a href="#"><img src="images/october_morning.jpg" alt="" title="#htmlcaption" /></a> <a href="#"><img src="images/refreshing.jpg" alt="" title="#htmlcaption2" /></a> <a href="#"><img src="images/ocean.jpg" alt="" title="#htmlcaption3" /></a> </div>
+            	<div id="slider" class="nivoSlider"> <a href="#"><img src="images/october_morning.jpg" alt="" title="#htmlcaption" /></a> <a href="#"><img src="images/refreshing.jpg" alt="" title="#htmlcaption2" /></a> <a href="#"><img src="images/ocean.jpg" alt="" title="#htmlcaption3" /></a> </div>
                 <!-- InstanceEndEditable -->
                 <div id="htmlcaption" class="nivo-html-caption">
                     <strong>GET INVOLVED!</strong><br>
@@ -105,7 +108,7 @@ Lisbon, OH 44432<br>
           </div>
           <div class="clear"></div>
     </div>
-        <div class="clear"></div><!-- #BeginLibraryItem "/Library/footer.lbi" --><div id="container">        <div id="footer">
+        <div class="clear"></div><!-- #BeginLibraryItem "/Library/footer.lbi" --><div id="footer">
         	<div class="cell third">
             	<h2>Follow Us on Facebook!</h2>
             	<hr>&nbsp;</hr>
@@ -126,7 +129,6 @@ Lisbon, OH 44432<br>
             </div>
 		<div class="clear"></div>
         </div>
-	</div>
     <div id="copy-footer">
     <hr>
         &copy; 2012 Hope Christian Fellowship North Canton | 116 7th St. North Canton, OH 44720
@@ -140,5 +142,6 @@ Lisbon, OH 44432<br>
         $('#slider').nivoSlider();
     });
     </script>
+    </div>
 </body>
 <!-- InstanceEnd --></html>
