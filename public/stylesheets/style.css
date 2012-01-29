@@ -27,8 +27,9 @@ a:hover {
 	}
 	
 p {
-	color:#fff;
-	}
+    color: #FFFFFF;
+    font-size: 0.8em;
+}
 
 hr {
 	background-image:url(../images/seperator.png);
@@ -45,17 +46,19 @@ hr {
 	padding-top:240px;
 	}
 
-#tagline{
-	color: #FFFFFF;
-	display: block;
-	float: right;
-	font-size: 13px;
-	font-style: italic;
-	margin: 113px 0 0;
-	width: 50%;
-	text-align:right;
-  padding-bottom: 1%;
-	}
+#tagline {
+    color: #FFFFFF;
+    display: block;
+    float: right;
+    font-size: 13px;
+    font-style: italic;
+    padding-bottom: 1%;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 100px;
+    width: 50%;
+}
 
 .justify {
 	text-align:justify;
@@ -81,17 +84,19 @@ h2 {
 	width:100%;
 	background-position: 0 0;
 	background-repeat:repeat-x;
-	height: 33%;
+	height: 100%;
 	position:absolute;
 	}
 	
 #header-inner{
-	/*height: 225px;*/
+	max-width:960px;
+  height: 205px;
 	}
 
 .page-wrap {
 	position:relative;
 	width:80%;
+	max-width: 960px;
 	margin:0 auto;
 	}
 
@@ -102,6 +107,7 @@ h2 {
     height: 20%;
     margin: 4% 0 0;
     width: 40%;
+		min-width:350px;
 }
 
 .remove {
@@ -109,10 +115,11 @@ h2 {
 }
 
 #menu {
-	background-color:#000;
-	width:100%;
-	max-width:960px;
-	height:42px;
+    background-color: #000000;
+    height: 42px;
+    position: absolute;
+    top: 163px;
+    width: 100%;
 	}
 
 #menu ul {
@@ -144,13 +151,6 @@ h2 {
 	color:#fff;
 	}
 
-#slide-show {
-	height:100%;
-	background-image:url(../images/shadow.png);
-	background-position:bottom;
-	background-repeat:no-repeat;
-	padding-bottom:22px;
-	}
 	
 .cell {
 	float:left;
@@ -212,6 +212,15 @@ h2 {
 	}
 
 /*Slider*/
+
+#slide-show {
+	height:100%;
+	background-image:url(../images/shadow.png);
+	background-position:bottom;
+	background-repeat:no-repeat;
+	padding-bottom:22px;
+	max-width:960px;
+	}
 
 .theme-default #slider {
 	width:100%; /* Make sure your images are the same size */
