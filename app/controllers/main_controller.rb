@@ -1,9 +1,5 @@
 class MainController < ApplicationController
-  before_filter :authenticate_user!
-  def blah
-    binding.pry
-  end
- 
+
   def content_page
 
     @page = Page.find_by_url_tag(params[:path])

@@ -7,6 +7,9 @@ gem 'will_paginate'
 gem 'pg'
 gem 'acts_as_versioned'
 gem 'thin'
+gem "ckeditor", "3.7.0.rc2"
+gem "carrierwave"
+gem "mini_magick"
 
 group :development, :test do
   gem 'cucumber'

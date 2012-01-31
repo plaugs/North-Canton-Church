@@ -1,7 +1,12 @@
 Northcantonchurch::Application.routes.draw do
 
-  #devise_for :users
+  mount Ckeditor::Engine => '/ckeditor'
+
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }, :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  devise_scope :user do
+    get "/logout" => "devise/sessions#destroy"
+  end
+
   resources :files
   match '/test', :to => "main#test"
   match '/blah', :to => "main#blah"
@@ -13,7 +18,7 @@ Northcantonchurch::Application.routes.draw do
 
   resources :pages, :menu_items
 
-  scope :admin, :as => "admin" do
+  namespace :admin do
     resources :pages
     resources :menu_items
     resources :page_versions
