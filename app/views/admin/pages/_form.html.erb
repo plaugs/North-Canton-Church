@@ -29,7 +29,7 @@
     <p>
       <%= f.label :content %><br />
       <%#= f.text_area :content %>
-      <%= cktext_area_tag(:content, @page.content, :input_html => {:cols => 10, :rows => 20}, :toolbar => 'Full') %>
+      <%= cktext_area_tag(:content, @page.content, :input_html => {:cols => 10, :rows => 20, :name => "page[content]"}, :toolbar => 'Full') %>
       <%#= fckeditor_textarea(:page, :content, :toolbarSet => 'Simple', :width => '90%', :height => '500px')%>
     </p>
 

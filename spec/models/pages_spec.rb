@@ -9,4 +9,5 @@ describe Admin::Pages do
   it "should create a new instance given valid attributes" do
     Admin::Pages.create!(@valid_attributes)
   end
+
 end

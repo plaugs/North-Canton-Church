@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120128190729) do
+ActiveRecord::Schema.define(:version => 20120131022034) do
+
+  create_table "ckeditor_assets", :force => true do |t|
+    t.string   "data_file_name",                  :null => false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.integer  "assetable_id"
+    t.string   "assetable_type",    :limit => 30
+    t.string   "type",              :limit => 30
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+  end
+
+  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
+  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
   create_table "four_oh_fours", :force => true do |t|
     t.string   "host"
@@ -35,6 +49,22 @@ ActiveRecord::Schema.define(:version => 20120128190729) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "page_versions", :force => true do |t|
+    t.integer  "page_id"
+    t.integer  "version"
+    t.string   "url_tag"
+    t.string   "title"
+    t.string   "html_title"
+    t.string   "keywords"
+    t.string   "description"
+    t.text     "content"
+    t.boolean  "published"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "page_versions", ["page_id"], :name => "index_page_versions_on_page_id"
+
   create_table "pages", :force => true do |t|
     t.string   "url_tag"
     t.string   "title"
@@ -45,6 +75,7 @@ ActiveRecord::Schema.define(:version => 20120128190729) do
     t.boolean  "published"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "version"
   end
 
   add_index "pages", ["url_tag"], :name => "index_pages_on_url_tag"

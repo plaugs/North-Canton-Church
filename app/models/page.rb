@@ -1,6 +1,8 @@
 class Page < ActiveRecord::Base
   has_many :page_versions
   before_save :set_url_tag
+
+  acts_as_versioned
   validates_presence_of :title, :content
 
   scope :published, :conditions => ['published=?', true]

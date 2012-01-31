@@ -15,7 +15,7 @@
     <td><%= page.title %></td>
     <td><%= page.url_tag %></td>
     <td><%= page.updated_at.strftime("%d-%B-%Y %I:%M%p") %></td>
-    <td><%= link_to image_tag('admin_icons/revert.png'), admin_page_path(page) %> (<%#= page.versions.count %>)</td>
+    <td><%= link_to image_tag('admin_icons/revert.png'), admin_page_path(page) %> (<%= page.versions.count %>)</td>
   </tr>
 <% end %>
 </table>
