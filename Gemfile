@@ -9,6 +9,7 @@ gem 'thin'
 gem "ckeditor", "3.7.0.rc2"
 gem "carrierwave"
 gem "mini_magick"
+gem "fog"
 gem "acts_as_versioned", :git => "git://github.com/luismreis/acts_as_versioned.git"
 
 group :development, :test do

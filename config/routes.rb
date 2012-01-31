@@ -33,5 +33,5 @@ Northcantonchurch::Application.routes.draw do
   root :to => 'main#content_page', :path => 'index'
 
   #All content pages
-  match '*path', :controller => 'main', :action => 'content_page'
+  #match '*path', :controller => 'main', :action => 'content_page'
 end

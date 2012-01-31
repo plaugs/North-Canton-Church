@@ -1,7 +1,10 @@
 class Page < ActiveRecord::Base
   has_many :page_versions
+  #has_many :page_images
   before_save :set_url_tag
 
+  mount_uploader :ckeditor_attachment_file_uploader, CkeditorAttachmentFileUploader
+  
   acts_as_versioned
   validates_presence_of :title, :content
 
