@@ -1,5 +1,6 @@
+<%= javascript_include_tag :ckeditor %>
 <%= form_for([:admin, @page]) do |f| %>  
-  <%= f.error_messages %>
+  <%= render "shared/error_messages", :target => @page %>
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
@@ -27,7 +28,8 @@
 
     <p>
       <%= f.label :content %><br />
-      <%= f.text_area :content %>
+      <%#= f.text_area :content %>
+      <%= cktext_area_tag(:content, @page.content, :input_html => {:cols => 10, :rows => 20, :name => "page[content]"}, :toolbar => 'Full') %>
       <%#= fckeditor_textarea(:page, :content, :toolbarSet => 'Simple', :width => '90%', :height => '500px')%>
     </p>
 
@@ -39,4 +41,5 @@
     <p><%= f.submit 'Save' %></p>
     
 <% end %>
+
 
