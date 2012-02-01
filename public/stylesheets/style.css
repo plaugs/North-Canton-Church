@@ -7,6 +7,7 @@ body {
 	margin:0;
 	border-top:10px solid #000;
 	background-color:#237d80;
+	font-size:100%
 	}
 
 img,
@@ -29,6 +30,8 @@ a:hover {
 p {
     color: #FFFFFF;
     font-size: 0.8em;
+	line-height: 140%;
+
 }
 
 hr {
@@ -66,10 +69,12 @@ hr {
 
 h1 {
 	color:#fff;
+	font-size:100%;
 	}
 	
 h2 {
 	color:#fff;
+	font-size:120%;
 	}
 
 
@@ -82,7 +87,7 @@ h2 {
  {
 	background-image:url(../images/header-bg2.jpg);
 	width:100%;
-	background-position: 0 0;
+	background-position: 60% -8px;
 	background-repeat:repeat-x;
 	height: 100%;
 	position:absolute;
@@ -105,9 +110,9 @@ h2 {
     display: block;
     float: left;
     height: 20%;
-    margin: 75px 0 0;
+    margin: 70px 0 0;
     width: 40%;
-		min-width:350px;
+	min-width:350px;
 }
 
 .remove {
@@ -185,11 +190,12 @@ h2 {
 	background-color:#333;
 	color:#fff;
 	padding-bottom: 25px;
+	font-size: 90%;
 	}
 
 
 #footer .third {
-	width:31%;
+	width:30%;
 	margin-left:2%;
 	}
 

@@ -1,13 +1,14 @@
 #header-inner h1 a {
     height: 20%;
-    margin: 4% 0 0 10%;
+    margin: 20px 0 0 10%;
     width: 80%;
+	min-width:400px;
 		}
 
 #tagline{
 	margin: 0;
-	width: 50%;
-  padding-bottom: 1%;
+	width: 100%;
+    padding-bottom: 1%;
 	}
 	
 
@@ -32,3 +33,11 @@
 		width: 40%;
 		padding:0;
 	}
+	
+#footer > .third > h2 {
+	    font-size:80%;
+	}
+
+h2 {
+	font-size:100%;
+}
