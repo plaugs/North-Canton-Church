@@ -56,8 +56,8 @@ hr {
     position: absolute;
     right: 0;
     text-align: right;
-    top: 100px;
     width: 50%;
+  	top: 135px;
 }
 
 .justify {
@@ -105,7 +105,7 @@ h2 {
     display: block;
     float: left;
     height: 20%;
-    margin: 4% 0 0;
+    margin: 75px 0 0;
     width: 40%;
 		min-width:350px;
 }
