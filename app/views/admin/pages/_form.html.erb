@@ -1,44 +1,61 @@
 <%= javascript_include_tag :ckeditor %>
-<%= form_for([:admin, @page]) do |f| %>  
-  <%= render "shared/error_messages", :target => @page %>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
+<%= form_for([:admin, @page], :html => {:class =>'form-horizontal'}) do |f| %>  
+  <%= render 'shared/error_messages', :target => @page %>
+  <div class='control-group'>   
+    <%= f.label :title, :class => 'control-label' %>
+    <div class='controls'>
+      <%= f.text_field :title, :class => 'input-xlarge' %>
+    </div>
+  </div>
 
-    <p>
-      <%= f.label :html_title %><br />
-      <%= f.text_field :html_title %>
-    </p>
+  <div class='control-group'>
+    <%= f.label :html_title, :class => 'control-label' %>
+    <div class='controls'>
+      <%= f.text_field :html_title, :class => 'input-xlarge' %>
+    </div>
+  </div>
 
-    <p>
-      <%= f.label :keywords %><br />
-      <%= f.text_field :keywords %>
-    </p>
+  <div class='control-group'>
+    <%= f.label :keywords, :class => 'control-label' %>
+    <div class='controls'>
+      <%= f.text_field :keywords, :class => 'input-xlarge' %>
+    </div>
+  </div>
+    
+  <div class='control-group'>
+    <%= f.label :description, :class => 'control-label' %>
+    <div class='controls'>
+      <%= f.text_field :description, :class => 'input-xlarge' %>
+    </div>
+  </div>
+    
+  <div class='control-group'>  
+    <%= f.label :url_tag, :class => 'control-label' %>
+    <div class='controls'>
+      <div class='input-prepend'>
+        <%= content_tag(:span, "#{request.protocol + request.host_with_port}", :class => 'add-on') %><%= f.text_field :url_tag, :class => 'span3', :size => 16 %>
+      </div>
+    </div>
+  </div>
 
-    <p>
-      <%= f.label :description %><br />
-      <%= f.text_field :description %>
-    </p>
+  <div class='control-group'>  
+    <%= f.label :content, :class => 'control-label' %>
+    <div class='controls'>
+      <%= cktext_area_tag(:content, @page.content, :input_html => {:cols => 10, :rows => 20, :name => 'page[content]'}, :toolbar => 'Full') %>
+    </div>
+  </div> 
 
-    <p>
-      <%= f.label :url_tag %><br />
-      <%= f.text_field :url_tag %>
-    </p>
-
-    <p>
-      <%= f.label :content %><br />
-      <%#= f.text_area :content %>
-      <%= cktext_area_tag(:content, @page.content, :input_html => {:cols => 10, :rows => 20, :name => "page[content]"}, :toolbar => 'Full') %>
-      <%#= fckeditor_textarea(:page, :content, :toolbarSet => 'Simple', :width => '90%', :height => '500px')%>
-    </p>
-
-    <p>
-      <%= f.label :published %><br />
+  <div class='control-group'>  
+    <%= f.label :published, :class => 'control-label' %>
+    <div class='controls'>
       <%=  f.check_box :published %>
-    </p>
+    </div>
+  </div>
 
-    <p><%= f.submit 'Save' %></p>
+  <div class='form-actions'>
+    <%= f.submit 'Create Page', :class => "btn-primary" %>
+    <%= link_to 'Back', admin_pages_path, :class => 'btn' %>
+  </div>
     
 <% end %>
 
