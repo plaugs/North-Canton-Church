@@ -18,7 +18,7 @@ Devise.setup do |config|
   # available as additional gems.
   require 'devise/orm/active_record'
   require 'openid/store/filesystem'
-  config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('/tmp'), :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id', :require => 'omniauth-openid'
+  config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('./tmp'), :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id', :require => 'omniauth-openid'
   #config.omniauth :google_apps, OpenID::Store::Filesystem.new('/tmp'), :domain => 'northcantonchurch.com'
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
