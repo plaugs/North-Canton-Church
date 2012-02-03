@@ -11,10 +11,10 @@ gem "mini_magick"
 gem "fog"
 gem "acts_as_versioned", :git => "git://github.com/luismreis/acts_as_versioned.git"
 gem 'twitter-bootstrap-rails', :group => :assets
+gem 'thin'
 
 group :development, :test do
   gem 'cucumber'
-  gem 'thin'
   gem 'cucumber-rails'
   gem 'webrat'
   gem 'rspec'
