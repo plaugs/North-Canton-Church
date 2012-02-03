@@ -13,6 +13,7 @@ gem "acts_as_versioned", :git => "git://github.com/luismreis/acts_as_versioned.g
 gem 'twitter-bootstrap-rails', :group => :assets
 gem 'thin'
 gem 'jquery-rails'
+gem 'acts_as_tree_rails3'
 
 group :development, :test do
   gem 'cucumber'
