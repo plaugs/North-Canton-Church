@@ -5,7 +5,6 @@ gem 'devise'
 gem 'omniauth-openid'
 gem 'will_paginate'
 gem 'pg'
-gem 'thin'
 gem "ckeditor", "3.7.0.rc2"
 gem "carrierwave"
 gem "mini_magick"
@@ -14,6 +13,7 @@ gem "acts_as_versioned", :git => "git://github.com/luismreis/acts_as_versioned.g
 
 group :development, :test do
   gem 'cucumber'
+  gem 'thin'
   gem 'cucumber-rails'
   gem 'webrat'
   gem 'rspec'

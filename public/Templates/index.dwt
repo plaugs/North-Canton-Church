@@ -137,8 +137,8 @@ Lisbon, OH 44432<br>
         &copy; 2012 Hope Christian Fellowship North Canton | 116 7th St. North Canton, OH 44720
 330-433-1061
     </div>
-<!-- #EndLibraryItem --><script type="text/javascript" src="../scripts/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="../jquery.nivo.slider.pack.js"></script>
+<!-- #EndLibraryItem --><script type="text/javascript" src="../javascripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.nivo.slider.pack.js"></script>
 </div>
 	<script type="text/javascript">
     $(window).load(function() {
