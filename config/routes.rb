@@ -1,5 +1,7 @@
 Northcantonchurch::Application.routes.draw do
 
+  root :to => 'main#content_page'
+
   mount Ckeditor::Engine => '/ckeditor'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }, :path_names => {:sign_in => 'login', :sign_out => 'logout'}
@@ -8,8 +10,6 @@ Northcantonchurch::Application.routes.draw do
   end
 
   resources :files
-  match '/test', :to => "main#test"
-  match '/blah', :to => "main#blah"
   resources :file_browsers
 
   resources :user_sessions
@@ -30,8 +30,7 @@ Northcantonchurch::Application.routes.draw do
   match ':controller/:action/:id'
   match ':controller/:action/:id.:format'
 
-  root :to => 'main#content_page', :path => 'index'
 
   #All content pages
-  #match '*path', :controller => 'main', :action => 'content_page'
+  match ':path' => 'main#content_page'
 end

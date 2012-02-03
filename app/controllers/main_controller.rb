@@ -1,9 +1,9 @@
 class MainController < ApplicationController
 
   def content_page
+    path = params[:path] || 'index'
+    @page = Page.where(url_tag: path).first
 
-    @page = Page.find_by_url_tag(params[:path])
-    
     unless @page.nil?
       
       @title = @page.html_title
