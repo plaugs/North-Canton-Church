@@ -257,6 +257,7 @@ DEPENDENCIES
   factory_girl
   fog
   heroku
+  jquery-rails
   mini_magick
   omniauth-openid
   pg

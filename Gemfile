@@ -12,6 +12,7 @@ gem "fog"
 gem "acts_as_versioned", :git => "git://github.com/luismreis/acts_as_versioned.git"
 gem 'twitter-bootstrap-rails', :group => :assets
 gem 'thin'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'cucumber'
