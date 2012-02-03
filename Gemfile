@@ -10,6 +10,7 @@ gem "carrierwave"
 gem "mini_magick"
 gem "fog"
 gem "acts_as_versioned", :git => "git://github.com/luismreis/acts_as_versioned.git"
+gem 'twitter-bootstrap-rails', :group => :assets
 
 group :development, :test do
   gem 'cucumber'
