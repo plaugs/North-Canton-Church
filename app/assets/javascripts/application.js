@@ -4,9 +4,9 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
-//= require public/javascripts/jquery-1.7.1.min
-//= require public/javascripts/ckeditor
-//= require public/javascrip/public/bootstrap
-//= require public/javascrip/public/application
+//= require jquery
+//= require jquery-ui
+//= require ckeditor/ckeditor
+//= require bootstrap
 //= require_tree .
 
