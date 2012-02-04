@@ -5,7 +5,7 @@ class Page < ActiveRecord::Base
 
 #  mount_uploader :ckeditor_attachment_file_uploader, CkeditorAttachmentFileUploader
   
-  #acts_as_versioned
+  acts_as_versioned
   validates_presence_of :title, :content
 
   scope :published, :conditions => ['published=?', true]

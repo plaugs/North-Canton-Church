@@ -13,15 +13,14 @@ Northcantonchurch::Application.routes.draw do
   resources :file_browsers
 
   resources :user_sessions
-
-  match '/our-realtors', :to => 'realtors#index'
-
+  
   resources :pages, :menu_items
 
   namespace :admin do
     resources :pages
     resources :menu_items
-    resources :page_versions
+    match '/page-versions/show/:id' => 'page_versions#show', :as => "page_versions_show"
+    match '/page-versions/restore/:id' => 'page_versions#restore', :as => "page_versions_restore"
     resources :users
     resources :realtors
   end

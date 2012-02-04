@@ -7,7 +7,7 @@
   </tr>
   <% @page.versions.reverse.each do |version| %>
   <tr>
-    <td><%= link_to "View", admin_page_version_path(version) %></td>
+    <td><%= link_to "View", admin_page_versions_show_url(version) %></td>
     <td><%= version.version %></td>
     <td><%= version.updated_at %></td>
     <td><%= version.content %></td>
@@ -18,4 +18,4 @@
 <h2>Current Version</h2>
 Title: <%= @page.title  %><br />
 Last Update: <%= @page.updated_at %><br />
-Content: <%= @page.content %>
+Content: <%= @page.content.html_safe %>

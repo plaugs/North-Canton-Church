@@ -1,4 +1,4 @@
-class Admin::PageVersionsController < ApplicationController
+class Admin::PageVersionsController < AdminController
   
   def show
     @page_version = PageVersion.find(params[:id])

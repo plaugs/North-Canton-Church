@@ -25,14 +25,9 @@
 <% end -%>
 </head>
 <body>
-  <div id="header">
-    <div id="header-inner">
-      <div id="center-wrapper">
-        <%= raw(flash_message) %>
-        <%= yield %>
-      </div>
-    </div>
+  <div clas="container">
+    <%= raw(flash_message) %>
+    <%= yield %>
   </div>
-
 </body>
 </html>
