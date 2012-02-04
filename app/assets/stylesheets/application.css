@@ -68,7 +68,7 @@ hr {
 
 #header-inner{
   max-width:940px;
-  height: 205px;
+  height: 200px;
 }
 
 #header-inner h1 a {
@@ -97,7 +97,6 @@ hr {
 #menu {
   background-color: black;
   height: 42px;
-  position: absolute;
   top: 163px;
   width: 100%;
 }
