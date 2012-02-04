@@ -186,14 +186,11 @@ hr {
 }
 
 #copyright{
-  margin: 0 auto;
-  text-align:center;
+  margin: 0 ;
+  text-align: center;
   color: white;
   font-size:0.85em;
-  padding:15px 0px 15px 0px;
+  padding:15px 0px 0px 0px;
   background-color: #333;
 }
 
-#copyright > hr {
-  max-width:90%;
-}
