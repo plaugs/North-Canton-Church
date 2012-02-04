@@ -1,4 +1,4 @@
-class Admin::PagesController < ApplicationController
+class Admin::PagesController < AdminController
   before_filter :get_title
   #
   # GET /admin/pages

@@ -50,7 +50,7 @@ hr {
   margin: 5px 0;
   }
 
-.page-topbg
+body
  {
   background-image:url(/images/header-bg2.jpg);
   width:100%;
@@ -99,6 +99,7 @@ hr {
   height: 42px;
   top: 163px;
   width: 100%;
+  clear:both;
 }
 
 #menu ul {
