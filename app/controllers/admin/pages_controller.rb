@@ -1,5 +1,6 @@
 class Admin::PagesController < AdminController
   before_filter :get_title
+  before_filter :authorize_user
   #
   # GET /admin/pages
   def index

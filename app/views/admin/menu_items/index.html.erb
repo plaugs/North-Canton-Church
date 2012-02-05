@@ -12,9 +12,9 @@
                   :id => "#{m.id}_add_child",
                   :title => 'add-child',
                   :class => 'btn btn-success') %>
-      <%= link_to("<i class='icon-edit icon-white'></i>&nbsp; Edit Submenu".html_safe,
+      <%= link_to("<i class='icon-edit icon-white'></i>&nbsp; Edit Menu Item".html_safe,
                   edit_admin_menu_item_path(m), :class => 'btn btn-primary') %>
-      <%= link_to("<i class='icon-trash icon-white'></i>&nbsp; Delete Submenu".html_safe, admin_menu_item_path(m),
+      <%= link_to("<i class='icon-trash icon-white'></i>&nbsp; Delete Menu".html_safe, admin_menu_item_path(m),
                                                       :confirm => 'Are you sure?',
                                                       :method => :delete, :class => 'btn btn-warning') %>
     <ul>

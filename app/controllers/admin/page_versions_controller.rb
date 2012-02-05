@@ -1,4 +1,5 @@
 class Admin::PageVersionsController < AdminController
+  before_filter :authorize_user
   
   def show
     @page_version = PageVersion.find(params[:id])

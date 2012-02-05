@@ -1,18 +1,15 @@
-# Filters added to this controller apply to all controllers in the application.
-# Likewise, all the methods added will be available for all controllers.
-
 class ApplicationController < ActionController::Base
-  helper :all # include all helpers, all the time
-  protect_from_forgery # See ActionController::RequestForgeryProtection for details
+  helper :all 
+  protect_from_forgery 
 
-  
-#  before_filter do |r|
-#    r.send(:check_authentication) if r.params[:controller] =~ /^admin/
-#  end
+  before_filter :store_location
 
-  # Scrub sensitive parameters from your log
-  # filter_parameter_logging :password
+  def store_location
+      session[:user_return_to] = request.url unless params[:controller] == "devise/sessions"
+  end
 
-  #We define these here so that we can access them in both controllers and views.
+  def after_sign_in_path_for(resource)
+    '/admin'
+  end
 
 end

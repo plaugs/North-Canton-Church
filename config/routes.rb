@@ -22,13 +22,12 @@ Northcantonchurch::Application.routes.draw do
     match '/page-versions/show/:id' => 'page_versions#show', :as => "page_versions_show"
     match '/page-versions/restore/:id' => 'page_versions#restore', :as => "page_versions_restore"
     resources :users
-    resources :realtors
   end
 
+  match '/admin' => 'admin#index', :as => 'admin'
 
   match ':controller/:action/:id'
   match ':controller/:action/:id.:format'
-
 
   #All content pages
   match ':path' => 'main#content_page'
