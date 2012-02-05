@@ -14,7 +14,6 @@ gem "acts_as_versioned", :git => "git://github.com/luismreis/acts_as_versioned.g
 gem 'thin'
 gem 'jquery-rails'
 gem 'acts_as_tree_rails3'
-gem "taps"
 
 group :development, :test do
   gem 'cucumber'
@@ -25,6 +24,7 @@ group :development, :test do
   gem 'factory_girl'
   gem 'email_spec'
   gem 'heroku'
+  gem 'taps'
   gem 'capybara'
   gem 'pry'
   gem 'database_cleaner'
