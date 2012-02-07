@@ -54,7 +54,7 @@ body
  {
   background-image:url(/images/header-bg2.jpg);
   width:100%;
-  background-position: 60% -8px;
+  background-position: 60% -14px;
   background-repeat:repeat-x;
   height: 100%;
   position:absolute;
@@ -91,7 +91,7 @@ body
   right: 0;
   text-align: right;
   width: 50%;
-  top: 135px;
+  top: 123px;
 }
 
 #menu {
