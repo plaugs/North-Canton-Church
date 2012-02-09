@@ -26,6 +26,10 @@ class MainController < ApplicationController
   end
 
   def determine_layout
-    if request[:path] == 'index' then 'index' else 'application' end
+    if request[:path] == 'index' || request[:path].blank?
+      'index'
+    else 
+      'application' 
+    end
   end
 end
