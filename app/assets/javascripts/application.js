@@ -6,9 +6,8 @@
 //
 //= require jquery
 //= require jquery-ui
-//= require ckeditor/ckeditor
 //= require bootstrap
-//= require jquery.nivo.slider.pack
-//= require nivo_loader
-//= require_tree .
+//= require ckeditor/ckeditor
+//= require rails
+// require_tree .
 

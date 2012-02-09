@@ -10,7 +10,7 @@ class MainController < ApplicationController
       @h1 = @page.title
 
       respond_to do |format|
-        format.html
+        format.html { render :layout => determine_layout }
         format.xml  { render :xml => @page }
       end
     else
@@ -26,6 +26,6 @@ class MainController < ApplicationController
   end
 
   def determine_layout
-    if request[:action] != 'index' then 'application' else 'homepage' end
+    if request[:path] == 'index' then 'index' else 'application' end
   end
 end

@@ -1,5 +1,5 @@
 <li>
-  <%= link_to menu_item.label, menu_item.url %>
+  <%= link_to menu_item.label, menu_item.path %>
   <% unless menu_item.children.empty? %>
   <ul>
     <%= render :partial => "shared/menu_item", :collection => menu_item.children %>

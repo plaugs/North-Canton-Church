@@ -22,52 +22,9 @@
   </head>
   <body>
     <div class="page-wrap container">
-      <div id="header-inner">
-        <h1><a href="/" id="logo"><img src="/images/logo.png" width="328" height="82" alt="Hope Christian Fellowship"></a></h1>
-        <div id="tagline">"Revealing Jesus through building relationships"</div>
-        <div id="menu">
-          <%= content_tag :ul do %>
-            <li><a href="/">HOME</a></li>
-            <li><a href="mission.html">MISSION</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="events.html">EVENTS</a></li>
-            <li><a hre/f="contact.html">CONTACT</a></li>
-          <% end %>
-        </div>
-      </div>
-      <%= content_tag :div, :class => 'carousel' do %>
-        <%= content_tag :div, :class => 'carousel-inner' do %>
-
-          <%= content_tag :div, :class => "item active" do %>
-            <%= image_tag 'october_morning.jpg' %>
-            <%= content_tag :div, :class => 'carousel-caption' do %>
-            <p><strong>GET INVOLVED!</strong><br>
-              Joining us here at Hope Christian Fellowship is not difficult. 
-              We would love to have you! Yet, we understand that you may need 
-              to take time to pray about your commitment. 
-              <a href="#">Click Here to find out more</a>.
-            </p>
-            <% end %>
-          <% end %>
-
-          <%= content_tag :div, :class => "item" do %>
-            <%= image_tag 'refreshing.jpg' %>
-            <%= content_tag :div, :class => 'carousel-caption' do %>
-            <p><strong>TIMES OF REFRESHING: PRAYER AND WORSHIP</strong><br> Join us for a time of prayer, worship and fellowship. Monday February 6th at 7:00PM <a href="#">Click Here to find out more</a>.</p>
-            <% end %>
-          <% end %>
-
-          <%= content_tag :div, :class => "item" do %>
-            <%= image_tag 'ocean.jpg' %>
-            <%= content_tag :div, :class => 'carousel-caption' do %>
-            <p><strong>BREAKTHROUGH PRAYER: HOME GROUP</strong><br>You can order the book "Breakthrough Prayer" by Jim Cymbala, but you not need to book to be a part of the home group. <br><a href="#">Click Here to find out more</a>.</p>
-            <% end %>
-          <% end %>
-        <% end %>
-        <%= link_to "&lsaquo;".html_safe, '', :class => 'carousel-control left', 'data-slide' => "prev" %>
-        <%= link_to "&rsaquo;".html_safe, '', :class => 'carousel-control right', 'data-slide' => "next" %>
-      <% end %>
+      <%= render :partial => 'shared/header' %>
       <%= yield %>
+      <%= render :partial => 'shared/footer' %>
       <div class="row-fluid" id="copyright">
         <div class='span12'> 
           <hr>

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>North Canton Church</title>
+    <%= stylesheet_link_tag "bootstrap", "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <script type="text/javascripts">
+    <% if Rails.env.production? -%>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-28608739-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    <% end -%>
+    </script>
+  </head>
+  <body>
+    <div class="page-wrap container">
+      <%= render :partial => 'shared/header' %>
+
+      <%= content_tag :div, :class => 'carousel' do %>
+        <%= content_tag :div, :class => 'carousel-inner' do %>
+
+          <%= content_tag :div, :class => "item active" do %>
+            <%= image_tag 'october_morning.jpg' %>
+            <%= content_tag :div, :class => 'carousel-caption' do %>
+            <p><strong>GET INVOLVED!</strong><br>
+              Joining us here at Hope Christian Fellowship is not difficult. 
+              We would love to have you! Yet, we understand that you may need 
+              to take time to pray about your commitment. 
+              <a href="#">Click Here to find out more</a>.
+            </p>
+            <% end %>
+          <% end %>
+
+          <%= content_tag :div, :class => "item" do %>
+            <%= image_tag 'refreshing.jpg' %>
+            <%= content_tag :div, :class => 'carousel-caption' do %>
+            <p><strong>TIMES OF REFRESHING: PRAYER AND WORSHIP</strong><br> Join us for a time of prayer, worship and fellowship. Monday February 6th at 7:00PM <a href="#">Click Here to find out more</a>.</p>
+            <% end %>
+          <% end %>
+
+          <%= content_tag :div, :class => "item" do %>
+            <%= image_tag 'ocean.jpg' %>
+            <%= content_tag :div, :class => 'carousel-caption' do %>
+            <p><strong>BREAKTHROUGH PRAYER: HOME GROUP</strong><br>You can order the book "Breakthrough Prayer" by Jim Cymbala, but you not need to book to be a part of the home group. <br><a href="#">Click Here to find out more</a>.</p>
+            <% end %>
+          <% end %>
+        <% end %>
+        <%= link_to "&lsaquo;".html_safe, '', :class => 'carousel-control left', 'data-slide' => "prev" %>
+        <%= link_to "&rsaquo;".html_safe, '', :class => 'carousel-control right', 'data-slide' => "next" %>
+      <% end %>
+      <%= yield %>
+      <%= render :partial => 'shared/footer' %>
+      <div class="row-fluid" id="copyright">
+        <div class='span12'> 
+          <hr>
+        </div>
+        <div class='span6'>
+          &copy; <%= Time.now.year %> Hope Christian Fellowship North Canton
+        </div>
+        <div class='span4 offset4'>
+          <address>116 7th St. North Canton, OH 44720 330-433-1061</address>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

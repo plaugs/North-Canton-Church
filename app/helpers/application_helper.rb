@@ -37,7 +37,7 @@ module ApplicationHelper
 
   def draw_menu(m, options)
     id = options[:id] || m.downcase.gsub(' ', '-')
-    direction = options[:direction]
+    direction = options[:direction] || 'horizontal'
     admin_only = options[:admin_only] || false
     if( admin_only and is_admin? ) or !admin_only
       # TODO add handling to partials for vertical and horizontal menus layouts
