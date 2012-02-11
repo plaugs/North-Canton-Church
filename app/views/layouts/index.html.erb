@@ -2,7 +2,9 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>North Canton Church</title>
+    <title><%= @page.title %> :: North Canton Church</title>
+    <meta name="keywords" content="<%= @page.keywords %>">
+    <meta name="description" content="<%= @page.description %>">
     <%= stylesheet_link_tag "bootstrap", "application" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
