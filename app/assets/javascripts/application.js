@@ -7,7 +7,7 @@
 //= require jquery
 //= require jquery-ui
 //= require bootstrap
+//= require bootstrap_loader
 //= require ckeditor/ckeditor
 //= require rails
 // require_tree .
-
