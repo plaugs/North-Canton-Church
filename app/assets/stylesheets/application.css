@@ -6,7 +6,7 @@ body {
   background-repeat:repeat-x;
   margin:0;
   border-top:10px solid #000;
-  background-color:#237d80;
+  background-color:#056D79;
 }
 
 h1 {
@@ -52,7 +52,7 @@ hr {
 
 body
  {
-  background-image:url(/images/header-bg2.jpg);
+  background-image:url(/images/header-bglarge-new.jpg);
   width:100%;
   background-position: 60% -14px;
   background-repeat:repeat-x;
@@ -71,11 +71,11 @@ body
   height: 200px;
 }
 
-#header-inner h1 a {
+#header-inner .logo a {
   display: block;
   float: left;
   height: 20%;
-  margin: 70px 0 0;
+  margin: 72px 0 0;
   width: 40%;
   min-width:350px;
 }
