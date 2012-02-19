@@ -14,17 +14,20 @@ module ApplicationHelper
   end
 
   def flash_message
-   if flash[:note]
-     klass = 'flash_note'
-     flash_content = flash[:note]
-   elsif flash[:notice]
-     klass='flash_note'
-     flash_content = flash[:notice]
-   elsif flash[:error]
-     klass = 'flash_error'
-     flash_content = "<h1>Error!</h1>#{flash[:error]}</div>"
-   end
-   "<div class=#{klass}>#{flash_content}</div>"
+    flash_content = ''
+    if flash[:note]
+      klass = 'alert alert-success'
+      flash_content = flash[:note]
+    elsif flash[:notice]
+      klass='alert alert-success'
+      flash_content = flash[:notice]
+    elsif flash[:error]
+      klass = 'alert alert-error'
+      flash_content = content_tag(:h1, "Error!") + flash[:error]
+    end
+    return if flash_content.nil?
+    flash_content += content_tag(:a, 'x', :class => 'close', "data-dismiss" => 'alert')
+    content_tag(:div, flash_content.html_safe, :class => klass)
   end
 
   def is_admin?
