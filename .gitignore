@@ -7,3 +7,6 @@ log/*.log
 tmp/*
 tags
 nbproject/*
+public/uploads
+public/tmp
+uploads
