@@ -19,6 +19,7 @@ Northcantonchurch::Application.routes.draw do
   namespace :admin do
     resources :pages
     resources :menu_items
+    resources :images
     match '/page-versions/show/:id' => 'page_versions#show', :as => "page_versions_show"
     match '/page-versions/restore/:id' => 'page_versions#restore', :as => "page_versions_restore"
     resources :users
