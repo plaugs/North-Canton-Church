@@ -7,7 +7,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.submit "Upload Image", :class => 'btn-primary' %>
-    <%= link_to "Cancel", admin_images_path, :class => 'btn' %>
+    <%= f.submit "Upload Image", :class => 'btn-primary', :id => 'image-upload-submit' %>
+    <span id="image-upload-spinner" style='float:right; margin: 15px 95px 15px 0px;', class='--btn-primary'></span>
   </div>
 <% end %>

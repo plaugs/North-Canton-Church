@@ -6,8 +6,10 @@
 //
 //= require jquery
 //= require jquery-ui
+//= require jquery.form
 //= require bootstrap
 //= require bootstrap_loader
 //= require ckeditor/ckeditor
 //= require rails
+//= require spin
 // require_tree .

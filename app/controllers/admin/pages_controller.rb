@@ -67,6 +67,7 @@ private
   end
 
   def load_images
+    @admin_image = Image.new
     @images = Image.all
   end
 end

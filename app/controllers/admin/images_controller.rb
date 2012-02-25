@@ -44,7 +44,10 @@ class Admin::ImagesController < AdminController
     respond_to do |format|
       if @admin_image.save
         format.html { redirect_to admin_images_url, notice: 'Image was successfully created.' }
-        format.json { render json: @admin_image, status: :created, location: @admin_image }
+        format.json do
+          @images = Image.all
+          render :json => { :image_list => render_to_string(:partial => 'admin/images/list.html.erb') }
+        end
       else
         format.html { render action: "new" }
         format.json { render json: @admin_image.errors, status: :unprocessable_entity }
