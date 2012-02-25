@@ -7,7 +7,7 @@ $(document).ready(function() {
 
   $(".alert").alert();
 
-  $("#new_admin_image").submit(function(){
+  $(".image-sidebar #new_admin_image").submit(function(){
 	$("#image-upload-spinner").show();
     $(this).ajaxSubmit({
       dataType: 'json',
