@@ -41,10 +41,9 @@ class Admin::ImagesController < AdminController
   # POST /admin/images.json
   def create
     @admin_image = Image.new(params[:admin_image])
-
     respond_to do |format|
       if @admin_image.save
-        format.html { redirect_to @admin_image, notice: 'Image was successfully created.' }
+        format.html { redirect_to admin_images_url, notice: 'Image was successfully created.' }
         format.json { render json: @admin_image, status: :created, location: @admin_image }
       else
         format.html { render action: "new" }

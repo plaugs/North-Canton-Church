@@ -1,7 +1,13 @@
-<%= form_for([:admin, @admin_image], :multipart => true) do |f| %>
-  <%= render 'shared/error_messages', :target => @page %>
+<%= form_for([:admin, @admin_image], :as => :admin_image, :html => {:multipart => true}) do |f| %>
+  <%= render 'shared/error_messages', :target => @admin_image %>
+
+  <div class="control-group">
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
+  </div>
 
   <div class="form-actions">
-    <%= f.submit, "Upload Image", :class => 'btn-primary' %>
+    <%= f.submit "Upload Image", :class => 'btn-primary' %>
+    <%= link_to "Cancel", admin_images_path, :class => 'btn' %>
   </div>
 <% end %>
