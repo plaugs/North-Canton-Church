@@ -8,9 +8,12 @@ CKEDITOR.editorConfig = function( config )
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
 	config.uiColor = '#DDD';
-	// 
-	//config.skin = 'v2'
+	
 	config.contentsCss = ['/assets/bootstrap.css', '/assets/core.css'];
+	config.enterMode = CKEDITOR.ENTER_BR;
+	config.fillEmptyBlocks = false;
+	config.autoParagraph = false;
+	config.ignoreEmptyParagraph = true;
 	config.toolbar = 'Full';
 
 	config.toolbar_Full =
