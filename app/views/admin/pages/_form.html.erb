@@ -1,8 +1,8 @@
-<%= form_for([:admin, @page], :html => {:class =>'form-horizontal'}) do |f| %>  
+<%= form_for([:admin, @page], :html => {:class =>'form-horizontal'}) do |f| %>
   <%= render 'shared/error_messages', :target => @page %>
 
   <% title_error = 'error' if @page.errors.include?(:title) %>
-  <%= content_tag :div, :class => "control-group #{title_error}" do %>   
+  <%= content_tag :div, :class => "control-group #{title_error}" do %>
     <%= label_tag :title, "Title", :class => 'control-label' %>
     <%= content_tag :div, :class => 'controls' do %>
       <%= f.text_field :title, :class => 'input-xlarge' %>
@@ -15,14 +15,14 @@
       <%= f.text_field :keywords, :class => 'input-xlarge' %>
     <% end %>
   <% end %>
-    
+
   <%= content_tag :div, :class => 'control-group' do %>
     <%= f.label :description, :class => 'control-label' %>
     <%= content_tag :div, :class => 'controls' do %>
       <%= f.text_field :description, :class => 'input-xlarge' %>
     <% end %>
   <% end %>
-    
+
   <%= content_tag :div, :class => 'control-group' do %>  
     <%= f.label :url_tag, :class => 'control-label' %>
     <%= content_tag :div, :class => 'controls' do %>
@@ -33,28 +33,26 @@
   <% end %>
 
   <% content_error = 'error' if @page.errors.include?(:content) %>
-  <%= content_tag :div, :class => "control-group #{content_error}" do %>  
+  <%= content_tag :div, :class => "control-group #{content_error}" do %>
     <%= label_tag :content, "Content", :class => 'control-label' %>
     <%= content_tag :div, :class => 'controls' do %>
       <%= cktext_area_tag(:content, @page.content, :input_html => {:cols => 10, :rows => 20, :name => 'page[content]'}, :toolbar => 'Full') %>
       <%= content_tag :span, :class => 'help-inline error' do %>
         <%= @page.errors[:content].join(', ')	 %>
-	    <% end if @page.errors.include?(:content) %>
+     <% end if @page.errors.include?(:content) %>
     <% end %>
-  <% end %> 
+  <% end %>
 
-  <%= content_tag :div, :class => 'control-group' do %>  
+  <%= content_tag :div, :class => 'control-group' do %>
     <%= f.label :published, :class => 'control-label' %>
     <%= content_tag :div, :class => 'controls' do %>
       <%=  f.check_box :published %>
     <% end %>
   <% end %>
-<% binding.pry %>
   <%= content_tag :div, :class => 'form-actions' do %>
     <%= f.submit submit_text, :class => "btn-primary" %>
     <%= link_to 'Back', admin_pages_path, :class => 'btn' %>
   <% end %>
-    
 <% end %>
 
 
