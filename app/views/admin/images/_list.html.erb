@@ -7,7 +7,7 @@
   <tbody>
     <tr><td>
     <% @images.each do |image| %>
-      <%= image_tag image.image.large.url, :width => 50 %>
+      <%= image_tag image.image.large.url, :width => 50, :class => 'image-item', :id => dom_id(image) %>
     <% end %>
     </td></tr>
   </tbody>
