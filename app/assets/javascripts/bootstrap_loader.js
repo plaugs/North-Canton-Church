@@ -39,7 +39,6 @@ $(document).ready(function() {
   });
 
   $('.user-control').click( function(e){
-	console.log(e.target);
 	var target = $(e.target);
 	$.ajax({
 		type: 'POST',
@@ -48,7 +47,7 @@ $(document).ready(function() {
 		dataType: 'json',
 		complete: function(request){
 			target.addClass("active");
-			target.closest("tr").effect('highlight');
+			target.closest("td").effect('highlight');
 		}
 	});
   });
