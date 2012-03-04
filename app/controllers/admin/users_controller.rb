@@ -54,4 +54,15 @@ class Admin::UsersController < AdminController
     @user.destroy    
     redirect_to root_url    
   end
+
+  def toggle_admin
+    user = User.find(params[:id])
+    admin_role = Role.find_by_name('admin')
+    if params[:value] == 'yes'
+      user.roles << admin_role
+    else
+      user.roles = []
+    end
+    render :nothing => true
+  end
 end

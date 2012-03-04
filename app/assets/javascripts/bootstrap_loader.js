@@ -37,6 +37,21 @@ $(document).ready(function() {
   $(".insertable-image").live('click', function(e){
     CKEDITOR.instances.content.insertHtml("<img src='" + $(e.target).attr('data-url') + "'>");
   });
+
+  $('.user-control').click( function(e){
+	console.log(e.target);
+	var target = $(e.target);
+	$.ajax({
+		type: 'POST',
+		data: {id: target.attr('data-user-id'), value: target.attr('data-value')},
+		url: '/admin/users/toggle-admin',
+		dataType: 'json',
+		complete: function(request){
+			target.addClass("active");
+			target.closest("tr").effect('highlight');
+		}
+	});
+  });
 });
 
 $(document).ready(function(){

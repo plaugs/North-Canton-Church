@@ -12,9 +12,9 @@
   <tr>
     <td><%=h user.email %></td>
     <td>
-      <div class='btn-group' data-toggle='buttons-radio'>
-        <button class='btn <%= user.is_admin? ? 'active btn-success' : '' %>'>Yes</button>
-        <button class='btn <%= user.is_admin? ? '' : 'active btn-danger' %>'>No</button>
+      <div class='btn-group user-control' data-toggle='buttons-radio' id='<%= dom_id(user) %>'>
+        <button data-value='yes' data-user-id='<%= user.id %>' class='btn btn-success <%= user.is_admin? ? 'active' : '' %>'>Yes</a></button>
+        <button data-value='no' data-user-id='<%= user.id %>' class='btn btn-danger <%= user.is_admin? ? '' : 'active' %>'>No</button>
       </div>
     </td>
   </tr>
