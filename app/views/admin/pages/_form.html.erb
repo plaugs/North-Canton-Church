@@ -29,7 +29,7 @@
     <%= f.label :url_tag, :class => 'control-label' %>
     <%= content_tag :div, :class => 'controls' do %>
       <%= content_tag :div, :class => 'input-prepend' do %>
-        <%= content_tag(:span, "#{request.protocol + request.host_with_port}", :class => 'add-on') %><%= f.text_field :url_tag, :class => 'span3', :size => 16 %>
+        <%= content_tag(:span, "#{request.protocol + request.host_with_port}/", :class => 'add-on') %><%= f.text_field :url_tag, :class => 'span3', :size => 16 %>
       <% end %>
     <% end %>
   <% end %>
