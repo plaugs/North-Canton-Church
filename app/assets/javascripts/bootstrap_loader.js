@@ -33,4 +33,8 @@ $(document).ready(function() {
   };
   var target = document.getElementById('image-upload-spinner');
   var spinner = new Spinner(opts).spin(target);
+
+  $(".insertable-image").live('click', function(e){
+    CKEDITOR.instances.content.insertHtml("<img src='" + $(e.target).attr('data-url') + "'>");
+  });
 });

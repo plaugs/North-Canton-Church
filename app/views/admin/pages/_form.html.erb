@@ -38,6 +38,7 @@
   <%= content_tag :div, :class => "control-group #{content_error}" do %>
     <%= label_tag :content, "Content", :class => 'control-label' %>
     <%= content_tag :div, :class => 'controls' do %>
+      <%#= f.text_area(:content, :cols => 40, :rows => 15 )%>
       <%= cktext_area_tag(:content, @page.content, :input_html => {:cols => 10, :rows => 20, :name => 'page[content]'}, :toolbar => 'Full') %>
       <%= content_tag :span, :class => 'help-inline error' do %>
         <%= @page.errors[:content].join(', ')	 %>

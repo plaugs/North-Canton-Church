@@ -1,0 +1,17 @@
+.insertable-image{
+  cursor:pointer;
+}
+
+.image-list-item{
+  float: left; 
+  border: 1px solid #ccc; 
+  padding: 2px; 
+  margin: 2px; 
+  height: 67px;
+}
+
+.image-item-wrap{
+  float:left;
+  height:50px;
+  clear:both;
+}
