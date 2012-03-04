@@ -38,3 +38,25 @@ $(document).ready(function() {
     CKEDITOR.instances.content.insertHtml("<img src='" + $(e.target).attr('data-url') + "'>");
   });
 });
+
+$(document).ready(function(){
+	$('#menu').sortable({
+		axis: 'y',
+		dropOnEmpty: false,
+		cursor: 'crosshair',
+		items: 'li',
+		opacity: 0.4,
+		scroll: true,
+		update: function(){
+			$.ajax({
+				type: 'post',
+				data: $('#menu').sortable('serialize'),
+				dataType: 'json',
+				complete: function(request){
+					$('#menu').effect('highlight');
+				},
+				url: '/admin/menu_items/sort'
+			})
+		}
+	});
+});
