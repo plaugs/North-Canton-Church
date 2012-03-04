@@ -7,7 +7,7 @@
 <p>
 <% @menu_items.each do |m| -%>
   <ul>
-  <li style='list-style-type:none;width:50%'><%= "#{m.label.titleize}" %>
+  <li style='list-style-type:none;width:35%'><%= "#{m.label.titleize}" %>
       <%= link_to("<i class='icon-play-circle icon-white'></i>&nbsp; Add Submenu".html_safe,
                   new_admin_menu_item_path(:parent_id => m.id),
                   :id => "#{m.id}_add_child",
