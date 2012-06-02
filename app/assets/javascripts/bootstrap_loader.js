@@ -1,7 +1,9 @@
 $(document).ready(function() {
   $('.delete-page').popover();
   
-  $('.carousel').carousel();
+  $('.carousel').carousel({
+    interval: 8000
+  });
 
   $("#image-upload-spinner").hide();
 
