@@ -4,7 +4,7 @@ module Admin::MenuItemsHelper
     html = ''
     menu_item.children.each do |child|
       #html += "<li><a href='#{child.url}'>#{child.label}</a>"
-      html += "<li>#{child.label}"
+      html += "<li id=" + "#{dom_id(child)}" + ">#{child.label}"
       html += link_to("<i class='icon-play-circle icon-white'></i>&nbsp; Create Submenu".html_safe,
                   new_admin_menu_item_path(:parent_id => child.id),
                   :id => "#{child.id}_add_child",

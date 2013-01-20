@@ -1,13 +1,14 @@
 class Admin::PagesController < AdminController
   before_filter :get_title
   before_filter :authorize_user
+  before_filter :load_images, :except => [:index, :destroy]
   #
   # GET /admin/pages
   def index
     field = params[:field]
     direction = params[:direction]
     @pages = Page.paginate :page => params[:page], :per_page => 10, :order => 'title ASC'
-    @page = Page.new    
+    @page = Page.new
   end
 
 
@@ -28,17 +29,17 @@ class Admin::PagesController < AdminController
   # POST /admin/pages
   def create
     @page = Page.new(params[:page])
-    
+
     if @page.save
       flash[:notice] = 'Page was successfully created.'
       redirect_to admin_pages_url
     else
       render :action => "new"
     end
-    
+
   end
 
-  # PUT /admin/pages/1  
+  # PUT /admin/pages/1
   def update
     @page = Page.find(params[:id])
 
@@ -51,28 +52,22 @@ class Admin::PagesController < AdminController
   end
 
   # DELETE /admin/pages/1
-  def destroy    
+  def destroy
     @page = Page.find(params[:id])
     @page.destroy
-    
+
     flash[:notice] = 'Page was successfully deleted.'
-    redirect_to(admin_pages_url)    
+    redirect_to(admin_pages_url)
   end
 
-  def show_form
-    begin
-      @page = Page.find(params[:id])
-    rescue ActiveRecord::RecordNotFound => e
-      @page = Page.new
-    end   
-  end
-
-  def hide_form
-    @page = Page.new
-  end
+private
 
   def get_title
     @title = "#{params[:controller]}: #{params[:action]}".titleize
   end
-  
+
+  def load_images
+    @admin_image = Image.new
+    @images = Image.all
+  end
 end

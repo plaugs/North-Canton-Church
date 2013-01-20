@@ -1,3 +1,4 @@
+.DS_Store
 Thumbs.db
 config/database.yml
 log/development.log
@@ -6,3 +7,6 @@ log/*.log
 tmp/*
 tags
 nbproject/*
+public/uploads
+public/tmp
+uploads

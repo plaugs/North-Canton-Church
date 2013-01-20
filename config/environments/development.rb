@@ -25,5 +25,19 @@ Northcantonchurch::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
 
   config.contact_recipient = 'nathanwise@gmail.com' 
+  
+  CarrierWave.configure do |config|
+    config.fog_credentials = {
+      :provider               => 'AWS',       # required
+      :aws_access_key_id      => 'AKIAIYVXI72NNWA6SNFA',       # required
+      :aws_secret_access_key  => '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',       # required
+      :region                 => 'us-east-1'  # optional, defaults to 'us-east-1'
+    }
+    config.fog_directory  = 'northcantonchurch-dev'                     # required
+    config.fog_host       = 'http://northcantonchurch_development.s3-website-us-east-1.amazonaws.com/'            # optional, defaults to nil
+    config.fog_public     = false                                   # optional, defaults to true
+    config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}  # optional, defaults to {}
+  end
+  
 end
 

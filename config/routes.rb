@@ -19,9 +19,12 @@ Northcantonchurch::Application.routes.draw do
   namespace :admin do
     resources :pages
     resources :menu_items
+    post "menu_items/sort" => 'menu_items#sort'
+    resources :images
     match '/page-versions/show/:id' => 'page_versions#show', :as => "page_versions_show"
     match '/page-versions/restore/:id' => 'page_versions#restore', :as => "page_versions_restore"
     resources :users
+    post 'users/toggle-admin' => 'users#toggle_admin'
   end
 
   match '/admin' => 'admin#index', :as => 'admin'

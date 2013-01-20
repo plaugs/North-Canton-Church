@@ -2,43 +2,6 @@ html {
   font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-body {
-  background-repeat:repeat-x;
-  margin:0;
-  border-top:10px solid #000;
-  background-color:#237d80;
-}
-
-h1 {
-  color:white;
-}
-  
-h2 {
-  color:white;
-}
-
-h3 {
-  color: white;
-}
-
-address {
-  color: white;
-}
-
-a, li, ul, ol, td, tr {
-  color:white;
-  text-decoration:none;
-  }
-  
-a:hover {
-  text-decoration:underline;
-}
- 
-p {
-  color: white;
-  line-height: 1.5em;
-}
-
 hr {
   background-image:url(../images/seperator.png);
   background-repeat:repeat-x;
@@ -52,14 +15,13 @@ hr {
 
 body
  {
-  background-image:url(/images/header-bg2.jpg);
+  background-image:url(/images/header-bglarge.jpg);
   width:100%;
   background-position: 60% -14px;
   background-repeat:repeat-x;
   height: 100%;
   position:absolute;
-} 
-
+}
 .page-wrap {
   position:relative;
   max-width: 940px;
@@ -71,11 +33,17 @@ body
   height: 200px;
 }
 
-#header-inner h1 a {
+.logo{
+  top: 163px;
+  display: block;
+  clear:both;
+}
+
+#header-inner .logo a {
   display: block;
   float: left;
   height: 20%;
-  margin: 70px 0 0;
+  margin: 72px 0 0;
   width: 40%;
   min-width:350px;
 }
@@ -92,9 +60,11 @@ body
   text-align: right;
   width: 50%;
   top: 123px;
+  clear:right;
 }
 
 #menu {
+  display: block;
   background-color: black;
   height: 42px;
   top: 163px;
@@ -188,4 +158,5 @@ body
   padding:15px 0px 0px 0px;
   background-color: #333;
 }
+
 

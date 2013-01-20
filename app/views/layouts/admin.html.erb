@@ -4,7 +4,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>North Canton Church</title>
 <%= csrf_meta_tags %>
-<%= stylesheet_link_tag "bootstrap.css" %>
+<%= stylesheet_link_tag "bootstrap.css", "admin" %>
+<link rel="icon" href="/favicon.png" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
 <script type="text/javascript">
     var CKEDITOR_BASEPATH = '/assets/ckeditor/';
 </script>
@@ -45,11 +47,11 @@
               <li class="">
                 <%= link_to "Menu", admin_menu_items_url %>
               </li>
+							<li class="">
+                <%= link_to "Images", admin_images_url %>
+              </li>
               <li class="">
                 <%= link_to "Users", admin_users_url %>
-              </li>
-              <li>
-                <%= link_to "Sign Out", logout_path, :method => :delete %>
               </li>
             </ul>
           </div>
