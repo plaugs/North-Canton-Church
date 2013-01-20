@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.0'
+gem 'rails', '3.2.11'
 gem 'devise'
 gem 'omniauth-openid'
 gem 'will_paginate'
@@ -10,7 +10,6 @@ gem "carrierwave"
 gem "mini_magick"
 gem "fog"
 gem "acts_as_versioned", :git => "git://github.com/luismreis/acts_as_versioned.git"
-#gem 'twitter-bootstrap-rails', :group => :assets
 gem 'thin'
 gem 'jquery-rails'
 gem 'acts_as_tree_rails3'
